@@ -7,12 +7,12 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Eaint Hmoo',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Eaint Hmoo - Software designer, freelancer',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    'I’m Eaint Hmoo, a software designer and entrepreneur based in Yangon City, Myanmar.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
-        <Providers>
+        <Providers> 
           <div className="flex w-full">
             <Layout>{children}</Layout>
           </div>

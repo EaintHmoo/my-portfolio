@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
+
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
@@ -11,6 +12,9 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import { SectionLayout } from '@/components/SectionLayout'
+import { faAward, faHeadphones, faSuitcase } from '@fortawesome/free-solid-svg-icons'
+import { AboutMeCard } from '@/components/AboutMeCard'
 
 function SocialLink({
   className,
@@ -47,14 +51,33 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+const ABOUTME = [
+  {
+    'icon': faAward,
+    'description': 'Experience',
+    'frequency': '4 + Years',
+  },
+  {
+    'icon': faSuitcase,
+    'description': 'Completed',
+    'frequency': '10 + Projects',
+  },
+  {
+    'icon': faHeadphones,
+    'description': 'Support',
+    'frequency': 'Online 24/7',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Eaint Hmoo. I live in Yangon City, where I design the future.',
 }
 
 export default function About() {
   return (
+    <>
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
@@ -69,62 +92,75 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            Hello, I am Eaint Hmoo Aung. 👋
           </h1>
+          <h5 className='text-2xl flex items-center gap-3 mt-4 font-light text-zinc-800 sm:text-3xl dark:text-zinc-100'>
+              <hr className='w-14 text-zinc-300 border-1'/> Software Engineer
+          </h5>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
-            </p>
-            <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
-            </p>
-            <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
-            </p>
-            <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
-            </p>
+          <p>
+            I’m a passionate Software Developer based in Myanmar with a strong focus on backend development. I love building efficient, scalable, and user-friendly applications that solve real-world problems.
+          </p>
+          <p>
+            My core stack includes PHP (Laravel), JavaScript (React & Next.js), and I’m expanding my skills in DevOps to bridge development and deployment seamlessly. With over 4 years of professional experience, I take pride in writing clean, maintainable code and delivering high-quality solutions.
+          </p>
+          <p>
+            I’m always eager to explore new technologies, collaborate with diverse teams, and continuously grow as a developer. Thanks for visiting — and welcome to my portfolio!
+          </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
             <SocialLink href="#" icon={InstagramIcon} className="mt-4">
               Follow on Instagram
             </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink href="https://github.com/EaintHmoo" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink href="https://www.linkedin.com/in/eaint-hmoo-aung-82278a1b7/" icon={LinkedInIcon} className="mt-4">
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:eainthmooaung@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              eainthmooaung@gmail.com
             </SocialLink>
           </ul>
         </div>
       </div>
     </Container>
+    <SectionLayout
+    title="About Me"
+    intro="My introduction"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-20">
+          <div className="max-w-xs lg:max-w-none mx-auto">
+            <Image
+              src={portraitImage}
+              alt=""
+              sizes="(min-width: 1024px) 32rem, 20rem"
+              className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+            />
+          </div>
+          <div className="sm:col-span-2 sm:col-start-2">
+            <div className="flex flex-col gap-5">
+                <div className='flex gap-5'>
+                {
+                  ABOUTME.map(item=><AboutMeCard item={item}/>)
+                }
+                </div>
+                
+                <div>
+                  <button className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg  ">
+                      Download CV
+                  </button>
+                </div>
+            </div>
+          </div>
+      </div>
+    </SectionLayout>
+    </>
   )
 }
