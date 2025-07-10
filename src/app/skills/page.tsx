@@ -105,47 +105,50 @@ const Other_SKILLS = [
 export default function Skills() {
   return (
      <div>
-     <SectionLayout 
-     title='Skills'
-     intro='My technical level'
-     >
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
-        <SkillCard title="Frontend Tech">
-            <div className='grid grid-cols-2 gap-2'>
-              {
-                  FRONTEND_SKILLS.map(item=>(
-                    <SkillItem item={item}/>
-                  ))
-              }
-            </div>
-        </SkillCard>
-        <SkillCard title="Backend Tech">
-            <div className='grid grid-cols-2 gap-2'>
-              {
-                  BACKEND_SKILLS.map(item=>(
-                    <SkillItem item={item}/>
-                  ))
-              }
-            </div>
-        </SkillCard>
-        <SkillCard title="Others Tech">
-            <div className='grid grid-cols-2 gap-2'>
-              {
-                  Other_SKILLS.map(item=>(
-                    <SkillItem item={item}/>
-                  ))
-              }
-            </div>
-        </SkillCard>
-      </div>
-        
-     </SectionLayout>
-     <SectionLayout
-     title='Qualification'
-     intro='My personal journey'
+      <SectionLayout 
+      title='Skills'
+      intro='My technical level'
+      id="skills"
       >
-          <Qualification/>   
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
+          <SkillCard title="Frontend Tech">
+              <div className='grid grid-cols-2 gap-2'>
+                {
+                    FRONTEND_SKILLS.map(item=>(
+                      <SkillItem item={item}/>
+                    ))
+                }
+              </div>
+          </SkillCard>
+          <SkillCard title="Backend Tech">
+              <div className='grid grid-cols-2 gap-2'>
+                {
+                    BACKEND_SKILLS.map(item=>(
+                      <SkillItem item={item}/>
+                    ))
+                }
+              </div>
+          </SkillCard>
+          <SkillCard title="Others Tech">
+              <div className='grid grid-cols-2 gap-2'>
+                {
+                    Other_SKILLS.map(item=>(
+                      <SkillItem item={item}/>
+                    ))
+                }
+              </div>
+          </SkillCard>
+        </div>
+          
       </SectionLayout>
+
+      <SectionLayout
+      title='Qualification'
+      intro='My personal journey'
+      id="qualifiation"
+        >
+            <Qualification/>   
+        </SectionLayout>
      </div>
   )
 }
