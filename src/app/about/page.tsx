@@ -145,19 +145,19 @@ export default function About() {
             />
           </div>
           <div className="sm:col-span-2 sm:col-start-2">
-            <div className="flex flex-col gap-5">
+              <div className="flex flex-col justify-between h-full gap-10 text-center sm:text-start">
                 <div className='flex gap-5'>
-                {
-                  ABOUTME.map(item=><AboutMeCard item={item}/>)
-                }
+                  {
+                    ABOUTME.map(item=><AboutMeCard item={item}/>)
+                  }
                 </div>
-                
+                  
                 <div>
-                  <button className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg  ">
+                  <a href='/avatar.jpg' download className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg  ">
                       Download CV
-                  </button>
+                  </a>
                 </div>
-            </div>
+              </div>
           </div>
       </div>
     </SectionLayout>

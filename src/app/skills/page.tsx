@@ -4,6 +4,7 @@ import { SkillCard } from '@/components/SkillCard'
 import { faAws, faBootstrap, faCss, faCss3, faDocker, faGit, faHtml5, faJs, faLaravel, faMdb, faPhp, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { SkillItem } from '@/components/SkillItem';
+import { Qualification } from '@/components/Qualification';
 
 export const metadata: Metadata = {
   title: 'Skills',
@@ -101,14 +102,15 @@ const Other_SKILLS = [
   },
 ];
 
-export default function Projects() {
+export default function Skills() {
   return (
+     <div>
      <SectionLayout 
      title='Skills'
      intro='My technical level'
      >
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
-        <SkillCard>
+        <SkillCard title="Frontend Tech">
             <div className='grid grid-cols-2 gap-2'>
               {
                   FRONTEND_SKILLS.map(item=>(
@@ -117,7 +119,7 @@ export default function Projects() {
               }
             </div>
         </SkillCard>
-        <SkillCard>
+        <SkillCard title="Backend Tech">
             <div className='grid grid-cols-2 gap-2'>
               {
                   BACKEND_SKILLS.map(item=>(
@@ -126,7 +128,7 @@ export default function Projects() {
               }
             </div>
         </SkillCard>
-        <SkillCard>
+        <SkillCard title="Others Tech">
             <div className='grid grid-cols-2 gap-2'>
               {
                   Other_SKILLS.map(item=>(
@@ -138,5 +140,12 @@ export default function Projects() {
       </div>
         
      </SectionLayout>
+     <SectionLayout
+     title='Qualification'
+     intro='My personal journey'
+      >
+          <Qualification/>   
+      </SectionLayout>
+     </div>
   )
 }

@@ -11,7 +11,7 @@ type AboutMeCardProps = {
 export function AboutMeCard({className, item}: AboutMeCardProps){
   return (
     <div key={item.description} 
-    className={clsx(className, 'overflow-hidden w-full  rounded-2xl bg-gray-50 dark:bg-zinc-800 border-1 border-gray-200 dark:border-gray-800 shadow-lg shadow-zinc-100 dark:shadow-zinc-800')}>
+    className={clsx(className, 'overflow-hidden w-full  rounded-2xl bg-gray-50 dark:bg-zinc-800 border-1 border-gray-200 dark:border-gray-800 shadow-md shadow-zinc-100 dark:shadow-teal-600/50')}>
         <div className="px-4 py-5 sm:p-10 text-center">
             <div className='flex justify-around'>
               <FontAwesomeIcon icon={item.icon} className='w-10'/>
