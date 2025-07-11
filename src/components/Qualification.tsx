@@ -1,4 +1,5 @@
 'use client';
+import { motion } from "motion/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -41,35 +42,43 @@ export function Qualification(){
     const [isEucation, setIsEucation] = useState(true);
     return (
         <>
-        <div className='w-full sm:w-80 mx-auto flex justify-between'>
+        <motion.div
+        initial={{opacity:0, y: -30}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration: 1, delay:0.5}}
+         className='w-full sm:w-80 mx-auto flex justify-between'>
             {/* Qualification Title */}
             <div onClick={()=>setIsEucation(true)} className='flex gap-2 cursor-pointer hover:text-teal-600 items-center text-xl sm:text-2xl '>
-                <FontAwesomeIcon icon={faUserGraduate} className='w-5' />
+                <FontAwesomeIcon icon={faUserGraduate} className='w-5'/>
                 <span>
                     Education
                 </span>
             </div>
             <div onClick={()=>setIsEucation(false)}  className='flex gap-2 cursor-pointer hover:text-teal-600 items-center text-xl sm:text-2xl'>
-                <FontAwesomeIcon icon={faBriefcase} className='w-5' />
+                <FontAwesomeIcon icon={faBriefcase} className='w-5'/>
                 <span>
                     Experience
                 </span>
             </div>
-        </div>
+        </motion.div>
 
-        <div className='mt-4'>
+        <motion.div
+        initial={{opacity:0, y: -30}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration: 1, delay:0.6}}
+         className='mt-4'>
             {
                 isEucation && (
-                    EDUCATIONS.map((item,index)=> <QualificationDotLine key={index} direction={index % 2 === 0 ? 'right':'left'} item={item}/>)
+                    EDUCATIONS.map((item,index)=> <QualificationDotLine key={index} direction={index % 2 === 0 ? 'left':'right'} item={item}/>)
                 )
             }
 
             {
                 !isEucation && (
-                    EXPERINECES.map((item,index)=> <QualificationDotLine key={index} direction={index % 2 === 0 ? 'right':'left'} item={item}/>)
+                    EXPERINECES.map((item,index)=> <QualificationDotLine key={index} direction={index % 2 === 0 ? 'left':'right'} item={item}/>)
                 )
             }
-        </div>
+        </motion.div>
         </>
     )
 }
