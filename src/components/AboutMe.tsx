@@ -62,7 +62,7 @@ export function AboutMe()
                     initial={{scale: 0.9}}
                     whileInView={{scale: 1}}
                     transition={{ duration: 0.6, delay: 0.3}}>
-                    <a href='/avatar.jpg' download className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg  ">
+                    <a href='/avatar.jpg' download className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg hover:bg-zinc-800/95 dark:hover:bg-gray-50/85 transaction duration-50 ">
                         Download CV
                     </a>
                     </motion.div>
