@@ -10,7 +10,7 @@ import {
 import { SocialLink } from '@/components/SocialLink'
 import { MailIcon } from '@/components/Icons'
 import Image from 'next/image'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/photos/my-photo.jpg'
 
 export function Introduction()
 {

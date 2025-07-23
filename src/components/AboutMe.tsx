@@ -1,7 +1,7 @@
 'use client';
 import { motion } from "motion/react";
 import Image from 'next/image'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/photos/my-photo-2.jpg'
 import { SectionLayout } from '@/components/SectionLayout'
 import { faAward, faHeadphones, faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import { AboutMeCard } from '@/components/AboutMeCard'
