@@ -20,6 +20,13 @@ const projects = [
     link: { href: 'https://github.com/EaintHmoo/movie_app', label: 'github.com' },
     logo: logoAnimaginary,
   },
+  {
+    name: 'Todo App',
+    description:
+      'Movie site, implemented by nextjs, tailwind css and typescript.',
+    link: { href: 'https://github.com/EaintHmoo/my-todo-list', label: 'github.com' },
+    logo: logoAnimaginary,
+  },
 ]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
