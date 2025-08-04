@@ -77,11 +77,11 @@ const BACKEND_SKILLS = [
     'level' : 'Basic',
     'icon' : faPython,  
   },
-  {
-    'name' : 'Firebase',
-    'level' : 'Basic',
-    'icon' : faReact,  
-  },
+  // {
+  //   'name' : 'Firebase',
+  //   'level' : 'Basic',
+  //   'icon' : faReact,  
+  // },
 ];
 
 const Other_SKILLS = [
