@@ -92,7 +92,10 @@ export default function ContactForm({token}:ContactFormProps)
             <div className="grid lg:grid-cols-2 gap-12">
                 {/* Contact Information */}
                 <div className="space-y-8">
-                <div>
+                <motion.div 
+                initial={{opacity:0, y: -50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{ duration:0.5, delay: 0.5}}>
                     <h3 className="text-2xl font-bold mb-6 text-zinc-800 dark:text-zinc-100">
                     Let's Connect
                     </h3>
@@ -100,11 +103,15 @@ export default function ContactForm({token}:ContactFormProps)
                     I'm currently available for freelance work and full-time opportunities. 
                     Feel free to reach out if you'd like to discuss a project or just want to say hello!
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div
+                 className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {contactInfo.map((info, index) => (
-                    <a
+                    <motion.a
+                        initial={{opacity:0, y: -50}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{ duration:0.5, delay: 0.5+(0.1 * index)}}
                         key={index}
                         href={info.link}
                         target={info.link.startsWith('http') ? '_blank' : undefined}
@@ -122,13 +129,17 @@ export default function ContactForm({token}:ContactFormProps)
                             {info.value}
                         </p>
                         </div>
-                    </a>
+                    </motion.a>
                     ))}
                 </div>
                 </div>
 
                 {/* Contact Form */}
-                <div className="bg-gray-50 dark:bg-zinc-800 border-1 text-zinc-800 dark:text-white border-gray-200 dark:border-gray-800 shadow-md shadow-zinc-100 dark:shadow-teal-500/50 rounded-xl p-8">
+                <motion.div
+                initial={{opacity:0, x: 50}}
+                whileInView={{opacity:1, x:0}}
+                transition={{ duration:0.5, delay: 0.5}}
+                className="bg-gray-50 dark:bg-zinc-800 border-1 text-zinc-800 dark:text-white border-gray-200 dark:border-gray-800 shadow-md shadow-zinc-100 dark:shadow-teal-500/50 rounded-xl p-8">
                 <h3 className="text-2xl font-bold ">
                     Send Message
                 </h3>
@@ -214,7 +225,7 @@ export default function ContactForm({token}:ContactFormProps)
                     
                     </button>
                 </form>
-                </div>
+                </motion.div>
             </div>
         </div>
     </div>
