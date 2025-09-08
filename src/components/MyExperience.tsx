@@ -66,7 +66,7 @@ const experiences: Experience[] = [
 const MyExperience = () => {
   return (
     <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto text-zinc-800 dark:text-zinc-100">
             <div className="relative">
                 {/* Timeline Line */}
                 <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-zinc-300"></div>
@@ -83,13 +83,13 @@ const MyExperience = () => {
                     <div className="absolute -top-[0.2rem] md:left-1/2 transform md:-translate-x-1/2 w-5 h-5 bg-zinc-600 rounded-full border-2 border-white shadow-lg z-10"></div>
 
                     <div className={`w-full md:w-5/12`}>
-                        <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 ml-9 md:ml-0 hover:-translate-y-2">
+                        <div className="bg-gray-50 dark:bg-zinc-800 border-1 border-gray-200 dark:border-gray-800 shadow-zinc-100 dark:shadow-teal-500/50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 ml-9 md:ml-0 hover:-translate-y-2">
                         <div className="flex items-start justify-between mb-4">
                             <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">
+                            <h3 className="text-xl font-bold mb-2">
                                 {exp.position}
                             </h3>
-                            <h4 className="text-lg font-semibold text-gray-600 mb-3 flex items-center gap-2">
+                            <h4 className="text-lg font-semibold text-zinc-600 dark:text-zinc-200 mb-3 flex items-center gap-2">
                                 {exp.company}
                                 <Link href={exp.link}>
                                 <ExternalLink size={16} className="opacity-50" />
@@ -98,7 +98,7 @@ const MyExperience = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+                        <div className="flex flex-wrap gap-4 text-sm text-zic-500 mb-4">
                             <div className="flex items-center gap-1">
                             <Calendar size={16} />
                             <span>{exp.startDate} - {exp.endDate}</span>
@@ -111,8 +111,8 @@ const MyExperience = () => {
 
                         <ul className="space-y-2 mb-6">
                             {exp.description.map((desc, i) => (
-                            <li key={i} className="text-gray-600 flex items-start gap-2">
-                                <span className="text-gray-500 mt-1.5">•</span>
+                            <li key={i} className="text-zinc-600 dark:text-zinc-300 flex items-start gap-2">
+                                <span className="text-zinc-500 dark:text-zinc-300 mt-1.5">•</span>
                                 {desc}
                             </li>
                             ))}
@@ -122,7 +122,7 @@ const MyExperience = () => {
                             {exp.technologies.map((tech, i) => (
                             <span 
                                 key={i}
-                                className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-xs font-medium"
+                                className="px-3 py-1 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 rounded-full text-xs font-medium"
                             >
                                 {tech}
                             </span>
