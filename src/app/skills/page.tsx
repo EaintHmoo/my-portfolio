@@ -1,15 +1,19 @@
 import { type Metadata } from 'next'
 import { SectionLayout } from '@/components/SectionLayout'
 import { SkillCard } from '@/components/SkillCard'
-import { faAws, faBootstrap, faCss, faCss3, faDocker, faGit, faHtml5, faJs, faLaravel, faMdb, faPhp, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faAws, faBootstrap, faCss, faCss3, faDocker, faGit, faHtml5, faJs, faLaravel, faPhp, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { SkillItem } from '@/components/SkillItem';
 import { Qualification } from '@/components/Qualification';
+import MyExperience from '@/components/MyExperience';
+import MyEducations from '@/components/MyEducations';
 
 export const metadata: Metadata = {
   title: 'Skills',
   description: 'My technological skill.',
 }
+
+
 
 const FRONTEND_SKILLS = [
   {
@@ -58,30 +62,28 @@ const BACKEND_SKILLS = [
     'icon' : faPhp,
   },
   {
-    'name' : 'Mysql',
-    'level' : 'Intermdiate',
-    'icon' : faDatabase, 
-  },
-  {
     'name' : 'Laravel',
     'level' : 'Intermdiate',
     'icon' : faLaravel,  
-  },
-  {
-    'name' : 'Mongodb',
-    'level' : 'Basic',
-    'icon' : faDatabase,
   },
   {
     'name' : 'Python',
     'level' : 'Basic',
     'icon' : faPython,  
   },
-  // {
-  //   'name' : 'Firebase',
-  //   'level' : 'Basic',
-  //   'icon' : faReact,  
-  // },
+];
+
+const DATABASES = [
+  {
+    'name' : 'Mysql',
+    'level' : 'Intermdiate',
+    'icon' : faDatabase, 
+  },
+  {
+    'name' : 'Mongodb',
+    'level' : 'Basic',
+    'icon' : faDatabase,
+  },
 ];
 
 const Other_SKILLS = [
@@ -99,6 +101,29 @@ const Other_SKILLS = [
     'name' : 'Docker',
     'level' : 'Basic',
     'icon' : faDocker,  
+  },
+];
+
+
+
+const educationData = [
+  {
+    institution: 'University of Technology',
+    degree: 'Master of Science in Computer Science',
+    date: '2022 - 2024',
+    description: 'Specialization in Artificial Intelligence and Machine Learning. Completed thesis on natural language processing.',
+  },
+  {
+    institution: 'State University',
+    degree: 'Bachelor of Science in Software Engineering',
+    date: '2018 - 2022',
+    description: 'Graduated with honors. Active member of the university\'s competitive programming club.',
+  },
+  {
+    institution: 'City College',
+    degree: 'Associate of Arts in General Studies',
+    date: '2016 - 2018',
+    description: 'Focused on foundational courses in mathematics and logic, preparing for university-level studies.',
   },
 ];
 
@@ -120,6 +145,15 @@ export default function Skills() {
                 }
               </div>
           </SkillCard>
+          <SkillCard title="Database">
+              <div className='grid grid-cols-2 gap-2'>
+                {
+                    DATABASES.map(item=>(
+                      <SkillItem item={item}/>
+                    ))
+                }
+              </div>
+          </SkillCard>
           <SkillCard title="Backend Tech">
               <div className='grid grid-cols-2 gap-2'>
                 {
@@ -129,7 +163,7 @@ export default function Skills() {
                 }
               </div>
           </SkillCard>
-          <SkillCard title="Others Tech">
+          <SkillCard title="Tools & DevOps">
               <div className='grid grid-cols-2 gap-2'>
                 {
                     Other_SKILLS.map(item=>(
@@ -142,13 +176,21 @@ export default function Skills() {
           
       </SectionLayout>
 
-      <SectionLayout
-      title='Qualification'
-      intro='My personal journey'
-      id="qualifiation"
-        >
-            <Qualification/>   
+        <SectionLayout
+        title='My Education'
+        intro='A showcase of my academic journey and achievements.'
+        id="education"
+          >
+            <MyEducations/>   
         </SectionLayout>
+
+        <SectionLayout
+        title='Work Experience'
+        intro="My professional journey and the amazing teams I've worked with"
+        id="experience"
+          >
+           <MyExperience/> 
+          </SectionLayout>
      </div>
   )
 }

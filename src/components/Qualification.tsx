@@ -10,12 +10,14 @@ const EDUCATIONS = [
     {
         name: 'Web Development Course',
         institue : 'Host Myanmar Mandalay',
-        timeline : '2020 - 2021'
+        timeline : '2020 - 2021',
+        type: 'edu',
     },
     {
         name: 'Bachelor Of Engineering',
         institue : 'University of Technology (Yatanarpon Cyber City)  ',
-        timeline : '2016 - 2022'
+        timeline : '2016 - 2022',
+        type: 'edu',
     },
 ];
 
@@ -23,17 +25,20 @@ const EXPERINECES = [
     {
         name: 'Software Engineer',
         institue : 'Source Code Myanmar Co.,Ltd.',
-        timeline : 'Apr, 2024 – Current '
+        timeline : 'Apr, 2024 – Current ',
+        type: 'exp',
     },
     {
         name: 'Junior Software Engineer',
         institue : 'Host Myanmar Co.,Ltd.',
-        timeline : 'Jan, 2021 – Sep, 2023'
+        timeline : 'Jan, 2021 – Sep, 2023',
+        type: 'exp',
     },
     {
         name: 'Graduation Internship Program',
         institue : 'Koe Koe Tech Co.,Ltd.',
-        timeline : 'Oct,2019 – Dec, 2019'
+        timeline : 'Oct,2019 – Dec, 2019',
+        type: 'exp',
     },
 ];
 

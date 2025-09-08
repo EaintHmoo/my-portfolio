@@ -7,6 +7,7 @@ type QualificationDotLineProps = {
     name: string;
     institue: string;
     timeline: string;
+    type: string;
   };
 };
 export function QualificationDotLine({direction = 'left',item}: QualificationDotLineProps){
