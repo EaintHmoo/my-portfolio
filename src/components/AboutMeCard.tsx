@@ -2,10 +2,12 @@
 import { motion } from "motion/react";
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type AboutMeCardProps = {
   className?: string;
   item: {
+    icon:IconProp,
     description: string;
     frequency: string;
   };
