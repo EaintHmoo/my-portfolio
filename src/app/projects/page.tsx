@@ -1,10 +1,19 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
+import { SectionLayout } from '@/components/SectionLayout'
 
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  featured: boolean;
+}
 const projects = [
   {
     name: 'My Porfolio',
@@ -29,6 +38,54 @@ const projects = [
   },
 ]
 
+const expProjects: Project[] = [
+  {
+    id: '1',
+    title: 'Won Yone - Fashion House Management',
+    description: "Built a full-stack platform centralizing sales, customer, order, stock, and product management with employee, expense, and process modules, featuring role-based access, real-time reporting, and scalable architecture.",
+    technologies: ['PHP', 'Laravel', 'Mysql', 'JavaScript', 'Tailwind CSS'],
+    liveUrl: 'https://www.sourcecode.com.mm/won-yone/',
+    githubUrl: '',
+    featured: true
+  },
+  {
+    id: '2',
+    title: 'The District Coffee Lounge',
+    description: 'Developed and maintained a POS system for four branches with mobile app integration, enabling order and sales tracking, menu browsing, rewards, and real-time updates across all locations.',
+    technologies: ['Flutter', 'Onesignal', 'PHP', 'JavaScript', 'Laravel', 'Mysql','Bootstrap.'],
+    liveUrl: 'https://www.sourcecode.com.mm/the-district-coffee-lounge-mobile-application/',
+    githubUrl: '',
+    featured: true
+  },
+  {
+    id: '3',
+    title: 'HtaWaRa - Educational Application',
+    description: 'Developed a secure, scalable app providing articles, videos, podcasts, games, and certified courses on sexuality education, featuring user authentication, content management, and interactive learning tools.',
+    technologies: ['Flutter', 'PHP', 'JavaScript', 'Laravel', 'Mysql','Bootstrap'],
+    liveUrl: 'https://www.htawara.app/',
+    githubUrl: 'https://github.com/EaintHmoo',
+    featured: true
+  },
+  {
+    id: '4',
+    title: 'Promethia',
+    description: 'A streamlined platform for managing tenders, RFQs, and bids with secure submission, supplier management, real-time notifications, and collaboration tools. It simplifies procurement, lowers costs, and opens opportunities for smaller suppliers.',
+    technologies: ['React.js', 'PHP', 'Laravel', 'MySQL'],
+    liveUrl: 'https://mptc.soisoft.com/',
+    githubUrl: 'https://github.com/EaintHmoo',
+    featured: true
+  },
+  {
+    id: '5',
+    title: 'KoKyarGyi Ecommerce Application',
+    description: 'E-commerce website for jewelry business with product catalog, shopping cart.',
+    technologies: ['PHP', 'JavaScript', 'Laravel', 'Mysql','Bootstrap'],
+    liveUrl: 'https://kokyargyijade.com/',
+    githubUrl: 'https://github.com/EaintHmoo',
+    featured: true
+  },
+];
+
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -47,9 +104,10 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
+    <>
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I've worked on many internal operational web apps over the years, which unfortunately I can't publicly share due to confidentiality. However, here are a few practice projects I've created to sharpen my skills.Feel free to check out the code and contribute if you have any ideas or suggestions for improvement!"
+      intro="Over the years, I’ve developed numerous internal operational web apps. Due to confidentiality, I can’t publicly share all of them, but I’ve included descriptions of some projects featured on my company’s site. In addition, I’ve built several practice projects to sharpen my skills — feel free to explore the code and contribute your ideas or suggestions for improvement!"
     >
       <ul
         role="list"
@@ -69,5 +127,47 @@ export default function Projects() {
         ))}
       </ul>
     </SimpleLayout>
+    <SectionLayout
+    title="My Projects"
+    intro="A showcase of my recent work and personal projects"
+    >
+        {/* My Projects */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {expProjects.map((project) => (
+            <div 
+              key={project.id}
+              className="bg-gray-50 dark:bg-zinc-800 border-1 border-gray-200 dark:border-gray-800 shadow-zinc-100 dark:shadow-teal-500/50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-2"
+            >
+              <div className="p-8">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-zinc-100 hover:text-teal-500 dark:hover:text-teal-400 mb-4">
+                  {project.title} 🔗
+                </h3>
+                </a>
+                <p className="text-zinc-600 dark:text-zinc-300 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, i) => (
+                    <span 
+                      key={i}
+                      className="px-3 py-1 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+    </SectionLayout>
+  </>
   )
 }

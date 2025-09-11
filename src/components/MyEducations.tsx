@@ -3,7 +3,7 @@ const educationData = [
     {
       institution: 'University of Technology ( Yatanarpon Cyber City )',
       degree: 'Bachelor of Engineering',
-      date: '2016 - 2022',
+      date: '2015 - 2022',
       description: 'Specialization in Computer Science. Completed thesis on Machine Learning.',
     },
     {
