@@ -139,8 +139,8 @@ export default function Skills() {
           <SkillCard title="Frontend Tech">
               <div className='grid grid-cols-2 gap-2'>
                 {
-                    FRONTEND_SKILLS.map(item=>(
-                      <SkillItem item={item}/>
+                    FRONTEND_SKILLS.map((item,index)=>(
+                      <SkillItem key={index} item={item}/>
                     ))
                 }
               </div>
@@ -148,8 +148,8 @@ export default function Skills() {
           <SkillCard title="Database">
               <div className='grid grid-cols-2 gap-2'>
                 {
-                    DATABASES.map(item=>(
-                      <SkillItem item={item}/>
+                    DATABASES.map((item,index)=>(
+                      <SkillItem key={index} item={item}/>
                     ))
                 }
               </div>
@@ -157,8 +157,8 @@ export default function Skills() {
           <SkillCard title="Backend Tech">
               <div className='grid grid-cols-2 gap-2'>
                 {
-                    BACKEND_SKILLS.map(item=>(
-                      <SkillItem item={item}/>
+                    BACKEND_SKILLS.map((item,index)=>(
+                      <SkillItem key={index} item={item}/>
                     ))
                 }
               </div>
@@ -166,8 +166,8 @@ export default function Skills() {
           <SkillCard title="Tools & DevOps">
               <div className='grid grid-cols-2 gap-2'>
                 {
-                    Other_SKILLS.map(item=>(
-                      <SkillItem item={item}/>
+                    Other_SKILLS.map((item,index)=>(
+                      <SkillItem key={index} item={item}/>
                     ))
                 }
               </div>

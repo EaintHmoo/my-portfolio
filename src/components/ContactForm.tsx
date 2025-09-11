@@ -98,11 +98,11 @@ export default function ContactForm({token}:ContactFormProps)
                 whileInView={{opacity:1, y:0}}
                 transition={{ duration:0.5, delay: 0.5}}>
                     <h3 className="text-2xl font-bold mb-6 text-zinc-800 dark:text-zinc-100">
-                    Let's Connect
+                    Let&#39;s Connect
                     </h3>
                     <p className=" leading-relaxed text-base italic mb-8 text-zinc-600 dark:text-zinc-400">
-                    I'm currently available for freelance work and full-time opportunities. 
-                    Feel free to reach out if you'd like to discuss a project or just want to say hello!
+                    I&#39;m currently available for freelance work and full-time opportunities. 
+                    Feel free to reach out if you&#39;d like to discuss a project or just want to say hello!
                     </p>
                 </motion.div>
 

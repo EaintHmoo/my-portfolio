@@ -29,7 +29,7 @@ export function Services(){
     return (
         <div className='w-full grid grid-cols-1 sm:grid-cols-3 gap-10'>
              {
-                EDUCATIONS.map((item)=><SerivceCard item={item}/>)
+                EDUCATIONS.map((item,index)=><SerivceCard key={index} item={item}/>)
              }
         </div>
     )
