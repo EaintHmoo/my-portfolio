@@ -81,8 +81,8 @@ export default function ContactForm({token}:ContactFormProps)
     {
         icon: <Globe className="w-6 h-6" />,
         title: 'Website',
-        value: 'sourcecode.com.mm',
-        link: 'https://www.sourcecode.com.mm/'
+        value: 'eainthmooaung.host',
+        link: 'https://www.eainthmooaung.host/'
     }
     ];
 
