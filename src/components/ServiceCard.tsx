@@ -2,10 +2,12 @@
 import { motion } from "motion/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type ServiceCardProps = {
   className?: string;
   item: {
+    icon:IconProp,
     name: string;
     description: string;
   }

@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type SkillItemProps = {
   item: {
+    icon:IconProp,
     name: string;
     level: string;
   };
