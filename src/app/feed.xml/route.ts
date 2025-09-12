@@ -18,8 +18,8 @@ export async function GET(req: Request) {
     author,
     id: siteUrl,
     link: siteUrl,
-    image: `${siteUrl}/favicon.ico`,
-    favicon: `${siteUrl}/favicon.ico`,
+    image: `${siteUrl}/favicon.ico?v=2`,
+    favicon: `${siteUrl}/favicon.ico?v=2`,
     copyright: `All rights reserved ${new Date().getFullYear()}`,
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
