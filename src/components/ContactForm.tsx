@@ -81,7 +81,7 @@ export default function ContactForm({token}:ContactFormProps)
     {
         icon: <Globe className="w-6 h-6" />,
         title: 'Website',
-        value: 'my-portfolio-pstj.vercel.app',
+        value: 'www.eainthmoo.xyz',
         link: '/'
     }
     ];

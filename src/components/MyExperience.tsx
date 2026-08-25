@@ -22,14 +22,14 @@ const experiences: Experience[] = [
     link: 'https://sourcecode.com.mm/',
     location: 'Yangon, Myanmar',
     startDate: 'Apr 2024 ',
-    endDate: 'Present',
+    endDate: 'Apr 2026',
     description: [
       'Developed and maintained web applications (POS, Social App, Royalty System) using Laravel and React.js',
       'Collaborated with cross-functional and mobile teams to deliver seamless, high-quality solutions',
       'Designed and implemented APIs, optimized performance, and improved user experience across platforms',
       'Applied best practices for code quality, scalability, and maintainability in all projects'
     ],
-    technologies: ['React.js', 'TypeScript','PHP', 'Laravel', 'JavaScript','Bootstrap','Tailwind CSS', 'MysqlSQL', 'AWS (EC2,S3)', 'Linux']
+    technologies: ['React.js', 'Next.js', 'TypeScript','PHP', 'Laravel', 'JavaScript','Bootstrap','Tailwind CSS', 'MysqlSQL', 'AWS (EC2,S3)', 'Linux']
   },
   {
     id: '2',

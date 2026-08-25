@@ -1,7 +1,7 @@
 'use client';
 import { motion } from "motion/react";
 import Image from 'next/image'
-import portraitImage from '@/images/photos/my-photo-2.jpg'
+import portraitImage from '@/assets/images/photos/my-photo-2.jpg'
 import { SectionLayout } from '@/components/SectionLayout'
 import { faAward, faHeadphones, faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import { AboutMeCard } from '@/components/AboutMeCard'
@@ -62,7 +62,7 @@ export function AboutMe()
                     initial={{scale: 0.9}}
                     whileInView={{scale: 1}}
                     transition={{ duration: 0.6, delay: 0.3}}>
-                    <a href='/MY_CV.pdf' download className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg hover:bg-zinc-800/95 dark:hover:bg-gray-50/85 transaction duration-50 ">
+                    <a href='/Eaint_Hmoo_Aung_CV.pdf' download className="dark:bg-gray-50 px-10 py-4 text-center text-zinc-100 dark:text-zinc-800 bg-zinc-800 border-1 rounded-2xl dark:border-gray-200 border-gray-800 shadow-lg hover:bg-zinc-800/95 dark:hover:bg-gray-50/85 transaction duration-50 ">
                         Download CV
                     </a>
                     </motion.div>
